@@ -14,6 +14,6 @@ with sr.AudioFile(filename) as source:
     #transformando o txt em img
     response = openai.Image.create(prompt=text, n=1, size='1024x1024')
 
-    img_url = response['data'][0]['url']
-    print(f'URL da imagem gerada: {img_url}')
+    img = response['data'][0]['url']
+    print(f'URL da imagem gerada: {img}')
 
